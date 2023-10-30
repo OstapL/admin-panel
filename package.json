@@ -19,6 +19,7 @@
   "dependencies": {
     "@pinia/nuxt": "^0.5.1",
     "autoprefixer": "^10.4.16",
+    "firebase": "^10.5.2",
     "postcss": "^8.4.31",
     "sass": "^1.69.5",
     "vuetify": "^3.3.14"
