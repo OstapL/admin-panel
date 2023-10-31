@@ -7,6 +7,7 @@
 		<ul>
 			<li>
 				<NuxtLink to="/">Home</NuxtLink>
+				<NuxtLink to="admin">Admin panel</NuxtLink>
 			</li>
 		</ul>
 	</div>
