@@ -35,16 +35,16 @@ export const signInUser = async (email: string, password: string | number) => {
 
 export const initUser = async () => {
   const auth = getAuth();
+  const { setLoginData, resetLoginData } = useUserStore();
+  setLoginData(auth.currentUser);
+
   onAuthStateChanged(auth, (user) => {
     if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/auth.user
-      const uid = user.uid;
-      console.log(user);
+      setLoginData(user);
       // ...
     } else {
       // User is signed out
-      // ...
+      resetLoginData();
     }
   });
 }
