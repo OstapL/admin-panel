@@ -1,5 +1,6 @@
 <script setup>
-
+const userStore = useUserStore();
+const { isLoggedIn } = storeToRefs(userStore);
 </script>
 
 <template>
@@ -7,7 +8,7 @@
 		<ul>
 			<li>
 				<NuxtLink to="/">Home</NuxtLink>
-				<NuxtLink to="admin">Admin panel</NuxtLink>
+				<NuxtLink to="admin" v-if="isLoggedIn">Admin panel</NuxtLink>
 			</li>
 		</ul>
 	</div>
